@@ -168,7 +168,7 @@ a{
   }
   
 
-/* design */
+/* HOME */
 
 *{
     box-sizing: border-box;
@@ -219,7 +219,7 @@ h2{
   }
 
 .nav__menu{
-    margin-top: 2em;
+    margin-top: 5em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -256,7 +256,28 @@ h2{
     padding: 3em 3em;
 }
 
-img {
+.nav__menu img {
     max-width: 300px;
 }
 
+/* ART */
+
+.art__content{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2em;
+  padding: 2em;
+  text-align: center;
+}
+
+.art__content img{
+  max-width: 400px;
+  max-height: 400px;
+}
+
+#artblock {
+  padding: 2em 5em 5em 5em;
+}
