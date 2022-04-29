@@ -62,8 +62,15 @@ html{
     scroll-behavior: smooth;
 }
 
-.nav__logo{
-    margin-left: 2em;
+.logo_burger {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+.nav__bar{
+    text-anchor: end;
 }
 
 body{
