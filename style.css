@@ -187,8 +187,8 @@ html{
     margin-right: 4em;
 }
 
-
 body{
+  overflow-x: hidden;
     margin: 0 0 var(--header-height) 0;
     font-family: var(--body-font);
     font-weight: 300;
