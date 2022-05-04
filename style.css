@@ -93,11 +93,22 @@ h2{
   letter-spacing: 0.05em;
 }
 
+
+
 /* bio */
 .bio p{
-  margin-top: 3em;
+  margin-top: 2.5em;
   text-align: center;
   color: rgb(170, 170, 170);
+  line-height: 2.5em;
+}
+
+.bio a{
+  color: rgb(44, 166, 146);
+}
+
+.bio a:hover{
+  text-decoration: underline;
 }
 
 /* header */
@@ -107,10 +118,6 @@ h2{
   position: relative;
   display: flex;
   justify-content: center;
-  overflow: hidden;
-}
-
-.content__container {
   overflow: hidden;
   height: 40px;
   padding: 0 40px;
@@ -124,6 +131,15 @@ h2{
   font-size: larger;
   letter-spacing: 0.05em;
 }
+
+.content__container__text a{
+  color: #de412c;
+}
+.content__container__text a:hover{
+  text-decoration: underline;
+}
+
+
 .content__container__list {
   margin-top: 0;
   padding-left: 185px;
@@ -403,6 +419,10 @@ h2{
     transform: none;
   }
   
+#menu a.me{
+  position: fixed;
+  bottom:3em;
+}
 
 /* HOME */
 
@@ -586,8 +606,8 @@ padding: 3em 3em;
     margin-top: 3em;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: row;
     font-family: var(--body-font);
     font-weight: 400;
     font-style: normal;
@@ -596,20 +616,15 @@ padding: 3em 3em;
 }
 
  @media (max-width: 750px) {
-  h2{
-    margin-left: 8em;
-}
+
  }
 
  @media (max-width: 485px) {
-  h2{
-    margin-left: 5em;
-}
 
 .logo_burger {
   margin-left: 2em;
 }
-
+ 
 .art__content img{
   max-width: auto;
   padding-left: 2em;
@@ -621,10 +636,14 @@ padding: 3em 3em;
   position: fixed;
   margin-top: 3rem;
   float: left;
-  margin-left: 1em;
+  margin-left: 0em;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
 }
 
+.panel{
+  flex-direction: column;
+
+}
  }
