@@ -97,7 +97,7 @@ h2{
 
 /* bio */
 .bio p{
-  margin-top: 2.5em;
+  margin-top: 2em;
   text-align: center;
   color: rgb(170, 170, 170);
   line-height: 2.5em;
@@ -110,6 +110,7 @@ h2{
 .bio a:hover{
   text-decoration: underline;
 }
+
 
 /* header */
 
@@ -166,11 +167,11 @@ h2{
 }
 
 .content__container__list #b {
-  color: darkcyan;
+  color: firebrick;
 }
 
 .content__container__list #c {
-  color: coral;
+  color: goldenrod;
 }
 
 .content__container__list #d {
@@ -339,6 +340,7 @@ h2{
                 background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 opacity 0.55s ease;
   }
+
   
   #menuToggle span:first-child{
     transform-origin: 0% 0%;
