@@ -1,5 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;1,300;1,400;1,500&display=swap');
 
+:root{
+--header-height: 3rem;
+
+/* color */
+--main-color: #489FB5;
+--main-color-lighter: #82C0CC;
+--title-color: #125665 ;
+--text-color: #16697A ;
+--accent-color: #FFA62B ;
+--accent-color-2: #D396E4 ;
+--background-color: #EDE7E3 ;
+
+/* font */
+--body-font: 'Plus Jakarta Sans', sans-serif;
+
+--big-font-size: 2rem;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--h3-font-size: 1.125rem;
+--normal-font-size: 0.938rem;
+--small-font-size: 0.813rem;
+--smaller-font-size: 0.75rem;
+
+--regular-font-weight: 400;
+
+
+/* bottom margins */
+--mb-0-25: 0.25rem;
+--mb-0-5: 0.5rem;
+--mb-0-75: 0.75rem;
+--mb-1: 1rem;
+--mb-1-5: 1.5rem;
+--mb-2: 2rem;
+--mb-2-5: 2.5rem;
+--mb-3: 3rem;
+}
+
+/* base */
+
+ul{
+    list-style: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+*{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.logo_burger {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
+body{
+overflow-x: hidden;
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-size: var(--normal-font-size);
+  background-color: white;
+  color: black;
+}
+
+.logo_burger svg{
+  margin-top: 4em;
+  margin-left: 0.8em;
+}
+
+h2{
+  margin-top: 5em;
+  font-size: larger;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+/* bio */
+.bio p{
+  margin-top: 3em;
+  text-align: center;
+  color: rgb(170, 170, 170);
+}
+
+/* header */
+
 .content {
   margin-top: 5em;
   position: relative;
@@ -17,9 +118,9 @@
 .content__container__text {
   display: inline;
   float: left;
-  margin-top: 8.5px;
+  margin-top: 8.8px;
   font-weight: 600;
-  font-size: large;
+  font-size: larger;
   letter-spacing: 0.05em;
 }
 .content__container__list {
@@ -28,7 +129,8 @@
   text-align: left;
   list-style: none;
   font-weight: 600;
-  font-size: large;
+  font-size: larger;
+  font-style: italic;
   letter-spacing: 0.05em;
   -webkit-animation-name: change;
   -webkit-animation-duration: 10s;
@@ -38,7 +140,7 @@
   animation-iteration-count: infinite;
 }
 .content__container__list__item {
-  line-height: 40px;
+  line-height: 40.5px;
   margin: 0;
 }
 
@@ -172,56 +274,6 @@
  }
 }
 
-:root{
---header-height: 3rem;
-
-/* color */
---main-color: #489FB5;
---main-color-lighter: #82C0CC;
---title-color: #125665 ;
---text-color: #16697A ;
---accent-color: #FFA62B ;
---accent-color-2: #D396E4 ;
---background-color: #EDE7E3 ;
-
-/* font */
---body-font: 'Plus Jakarta Sans', sans-serif;
-
---big-font-size: 2rem;
---h1-font-size: 1.5rem;
---h2-font-size: 1.25rem;
---h3-font-size: 1.125rem;
---normal-font-size: 0.938rem;
---small-font-size: 0.813rem;
---smaller-font-size: 0.75rem;
-
---regular-font-weight: 400;
-
-
-/* bottom margins */
---mb-0-25: 0.25rem;
---mb-0-5: 0.5rem;
---mb-0-75: 0.75rem;
---mb-1: 1rem;
---mb-1-5: 1.5rem;
---mb-2: 2rem;
---mb-2-5: 2.5rem;
---mb-3: 3rem;
-}
-
-/* base */
-
-ul{
-    list-style: none;
-}
-
-li {
-    list-style-type: none;
-}
-
-a{
-    text-decoration: none;
-}
 
 /* HAMBURGER */
 
@@ -314,11 +366,35 @@ a{
     transform-origin: 0% 0%;
     transform: translate(200%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+    animation: pulse 5s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      background-color: #b1c6da;
+    }
+    30% {
+      background-color: #f693f1;
+    }
+    80% {
+      background-color: #f6e193;
+    }
+    100% {
+      background-color: #b1c6da;
+    }
   }
   
   #menu li{
+    font-size: larger;
+    font-weight: 600;
+    text-align: left;
+    letter-spacing: 0.05em;
     padding: 40px 0;
-    font-size: 22px;
+  }
+
+  #menu li:hover{
+    font-style: italic;
   }
   
   /* And let's slide it in from the left */
@@ -329,48 +405,8 @@ a{
 
 /* HOME */
 
-*{
-    box-sizing: border-box;
-    padding:0;
-    margin:0;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-.logo_burger {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 4em;
-    margin-right: 4em;
-}
-
-body{
-  overflow-x: hidden;
-    margin: 0 0 var(--header-height) 0;
-    font-family: var(--body-font);
-    font-weight: 300;
-    font-size: var(--normal-font-size);
-    background-color: white;
-    color: black;
-}
-
-.logo_burger svg{
-    margin-top: 4em;
-    margin-left: 0.8em;
-}
-
-h2{
-    font-family: var(--body-font);
-    font-weight: 500;
-    font-style: italic;
-    margin-left: 12em;
-    margin-top: 2em;
-}
-
 .nav__menu{
-    margin-top: 5em;
+    margin-top: 3em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -453,7 +489,7 @@ h2{
 
 .cc__content img {
   max-width: 300px;
-  max-height: 400px;
+  max-height: 350px;
 }
 
 .cc__content a {
