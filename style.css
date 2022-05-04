@@ -70,13 +70,14 @@ html{
 }
 
 body{
-overflow-x: hidden;
+  overflow-x: hidden;
   margin: 0 0 var(--header-height) 0;
   font-family: var(--body-font);
   font-weight: 300;
   font-size: var(--normal-font-size);
   background-color: white;
   color: black;
+  transition: background-color 1s ease;
 }
 
 .logo_burger svg{
@@ -454,25 +455,65 @@ h2{
 
 /* ART */
 
-.art__content{
+.art__content img{
+  max-width: 400px;
+  max-height: 400px;
+  align-items: center;
+}
+
+
+ /* panel styles */
+ .panel {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 2em;
-  padding: 2em;
   text-align: center;
+	/* min height incase content is higher than window height */
+	min-height: 100vh;
+	display: flex;
+  justify-content: space-evenly;
+  margin-top: -6.5em;
+  align-items: center;
+	/* outline: 10px solid red; */
+	/* turn above on to see the edge of panels */
 }
 
-.art__content img{
-  max-width: 400px;
-  max-height: 400px;
+/* colours */
+/*.color-violet*/
+[data-paint="violet"] {
+	background-color: #e6d9f4;
+}
+/*.color-indigo*/
+[data-paint="indigo"] {
+	background-color: #d7d3fa;
+}
+/*.color-blue*/
+[data-paint="blue"] {
+	background-color: #d3e9ff;
+}
+/*.color-green*/
+[data-paint="green"] {
+	background-color: #e3ffe1;
+}
+/*.color-yellow*/
+[data-paint="yellow"] {
+	background-color: #fffcdb;
+}
+/*.color-orange*/
+[data-paint="orange"] {
+	background-color: #ffecd9;
+}
+/*.color-red*/
+[data-paint="red"] {
+	background-color: #ffd7da;
+}
+/*.color-hotpink*/
+[data-paint="hotpink"] {
+	background-color: rgb(255, 216, 236);
 }
 
-#artblock {
-  padding: 2em 5em 5em 5em;
-}
 
 /* cc */
 
