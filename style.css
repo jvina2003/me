@@ -103,13 +103,52 @@ h2{
   line-height: 2.5em;
 }
 
-.bio a{
-  color: rgb(44, 166, 146);
+.bio .n{
+  color: rgb(152, 109, 89);
 }
 
-.bio a:hover{
+.bio .n:hover{
+  font-style: italic;
+}
+
+.bio .m{
+  color: rgb(48, 175, 149);
+}
+
+.bio .m:hover{
   text-decoration: underline;
 }
+
+.o{
+  color: rgb(236, 69, 152);
+  transform: translate(-50%,-50%);
+}
+
+.o{
+  position: relative;
+  color: rgb(176, 72, 199);
+  transform: translate(-50%,-50%);
+}
+
+.o[pop-up]::after{
+  content: attr(pop-up);
+  position: absolute;
+  background: rgb(132, 255, 0);
+  padding-left: 3px;
+  padding-right: 3px;
+  top: -200%;
+  left: 110%;
+  border-radius: 5px;
+  font-size: 30px;
+  transform: scale(0); 
+  transition: transform 0.4s ease,
+              rotate 0.4s ease;
+}
+
+.o[pop-up]:hover::after{
+  transform: scale(1) rotate(360deg);
+}
+
 
 
 /* header */
@@ -167,7 +206,7 @@ h2{
 }
 
 .content__container__list #b {
-  color: firebrick;
+  color: red;
 }
 
 .content__container__list #c {
