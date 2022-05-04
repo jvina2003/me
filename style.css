@@ -1,50 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;1,300;1,400;1,500&display=swap');
 
-#toggle{
-  position: relative;
-  display: block;
-  width: 32px;
-  height: 16px;
-  border-radius: 16px;
-  background: #222;
-  transform: 0.5s;
-  cursor: pointer;
-  box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1)
-              inset 0 8px 8px rgba(0, 0, 0, 0.1)
-              inset 0 -4px 4px rgba(0, 0, 0, 0.1);
-}
-
-#toggle.active{
-  background: #fff;
-  box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1)
-              inset 0 2px 8px rgba(0, 0, 0, 0.1)
-              inset 0 -4px 8px rgba(0, 0, 0, 0.05);
-}
-
-#toggle .indicator{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  background: linear-gradient(to bottom, #444, #222);
-  border-radius: 50%;
-  transform: scale(0.9);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5)
-              inset 0 4px 4px rgba(255, 255, 255, 0.2)
-              inset 0 -4px -4px rgba(255, 255, 255, 0.2);
-}
-
-#toggle.active .indicator{
-  left: 16px;
-  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1)
-              inset 0 4px 4px rgba(255, 255, 255, 1)
-              inset 0 -4px -4px rgba(255, 255, 255, 1);
-}
-
-
-
 
 :root{
 --header-height: 3rem;
@@ -71,20 +26,6 @@
 
 --regular-font-weight: 400;
 
-
-/* font for large devices */
-
-@media screen and (min-width: 968px) {
-    :root {
-        --big-font-size: 3rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
-        --small-font-size: 0.875rem;
-        --smaller-font-size: 0.813rem;
-    }
-}
 
 /* bottom margins */
 --mb-0-25: 0.25rem;
@@ -117,7 +58,8 @@ a{
     display: block;
     position: fixed;
     margin-top: 3rem;
-    left: 1340px;
+    float: left;
+    margin-left: -2em;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
@@ -253,7 +195,6 @@ h2{
     font-weight: 500;
     font-style: italic;
     margin-left: 12em;
-    margin-right: 10em;
     margin-top: 2em;
 }
 
@@ -391,3 +332,51 @@ text-decoration: none;
 display: block; 
 padding: 3em 3em;
 }
+
+@media (max-width: 1420px) {
+  .nav__menu{
+    margin-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-style: normal;
+  }
+
+}
+
+ @media (max-width: 750px) {
+  h2{
+    margin-left: 8em;
+}
+ }
+
+ @media (max-width: 485px) {
+  h2{
+    margin-left: 5em;
+}
+
+.logo_burger {
+  margin-left: 2em;
+}
+
+.art__content img{
+  max-width: auto;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+#menuToggle{
+  display: block;
+  position: fixed;
+  margin-top: 3rem;
+  float: left;
+  margin-left: 2em;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+ }
