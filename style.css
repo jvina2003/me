@@ -710,6 +710,7 @@ padding: 3em 3em;
 
 .logo_burger {
   margin-left: 2em;
+  position: fixed;
 }
  
 .art__content img{
