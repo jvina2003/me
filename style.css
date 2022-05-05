@@ -93,6 +93,52 @@ h2{
   letter-spacing: 0.05em;
 }
 
+/* night mode */
+
+body.light-mode {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+body.light-mode a {
+  color: rgb(0, 0, 0);
+}
+body.light-mode .o{
+  color: #de412c;
+}
+body.light-mode button {
+  background-color: #111;
+  color: rgb(255, 255, 255);
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+}
+
+body.dark-mode #menuToggle span{
+  background: white;
+}
+
+body.dark-mode .nav__logo svg{
+  background-color: white;
+}
+
+body.dark-mode {
+  background-color: rgb(30, 30, 30);
+  color: #eee;
+}
+body.dark-mode a{
+  color: white ;
+}
+body.dark-mode .o{
+  color: #de412c ;
+}
+body.dark-mode button {
+  background-color: #eee;
+  color: rgb(0, 0, 0);
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+}
+
 
 
 /* bio */
@@ -688,39 +734,3 @@ padding: 3em 3em;
 
 }
  }
-
-
-body.dark-mode {
-  background-color: rgb(30, 30, 30);
-  color: #eee;
-}
-body.dark-mode a{
-  color: white ;
-}
-body.dark-mode .o{
-  color: #de412c ;
-}
-body.dark-mode button {
-  background-color: #eee;
-  color: rgb(0, 0, 0);
-  position: fixed;
-  bottom: 2em;
-  right: 2em;
-}
-body.light-mode {
-  background-color: #eee;
-  color: rgb(0, 0, 0);
-}
-body.light-mode a {
-  color: rgb(0, 0, 0);
-}
-body.light-mode .o{
-  color: #de412c;
-}
-body.light-mode button {
-  background-color: #111;
-  color: #eee;
-  position: fixed;
-  bottom: 2em;
-  right: 2em;
-}
