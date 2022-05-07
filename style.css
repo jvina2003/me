@@ -37,6 +37,10 @@
 --mb-3: 3rem;
 }
 
+body{
+  scroll-snap-type: y mandatory;
+}
+
 /* base */
 
 ul{
@@ -58,9 +62,6 @@ a{
   margin:0;
 }
 
-html{
-  scroll-behavior: smooth;
-}
 
 .logo_burger {
   display: flex;
@@ -110,7 +111,7 @@ body.light-mode button {
   position: fixed;
   bottom: 2em;
   right: 2em;
-  z-index: 1;
+  z-index: 2;
 }
 
 body.dark-mode #menuToggle span{
@@ -138,7 +139,7 @@ body.dark-mode button {
   position: fixed;
   bottom: 2em;
   right: 2em;
-  z-index: 1;
+  z-index: 2;
 }
 
 
@@ -559,6 +560,11 @@ body.dark-mode button {
 
 /* ART */
 
+.art__content{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
 .art__content img{
   max-width: 400px;
   max-height: 400px;
@@ -568,20 +574,20 @@ body.dark-mode button {
 
  /* panel styles */
  .panel {
+  scroll-snap-align: start;
   display: flex;
   flex-direction: row;
   flex-grow: 1;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-	/* min height incase content is higher than window height */
-	min-height: 100vh;
-	display: flex;
+	height: 100vh;
   justify-content: space-evenly;
   margin-top: -6.5em;
   align-items: center;
 	/* outline: 10px solid red; */
 	/* turn above on to see the edge of panels */
+  overflow-y:auto;
 }
 
 /* colours */
@@ -652,11 +658,9 @@ display: block;
 padding: 3em 3em;
 }
 
-/* BRANDING */
-
+/* PASSION PROJECTS */
 
 .pp__content{
-  margin-top: 5em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -664,6 +668,7 @@ padding: 3em 3em;
   font-family: var(--body-font);
   font-weight: 400;
   font-style: normal;
+  margin-top: 5em;
 }
 
 .pp__content img {
@@ -684,6 +689,61 @@ text-decoration: none;
 display: block; 
 padding: 3em 3em;
 }
+
+/* pp1 */
+
+.pp1__content {
+  scroll-snap-align: start;
+  margin-top: -10em;
+}
+
+.pp1__content span{
+  white-space: pre-line;
+text-align: center;
+width: 1000px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.pp1__content h3 {
+  position: relative;
+  margin-bottom: 1.5em;
+  
+  }
+
+.pp1__content h4 {
+  text-align: center;
+  }
+
+.pp1__content img{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
+
+}
+
+.pp1__content p{
+  text-align: center;
+  width: 800px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.page{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+	height: 100vh;
+  align-items: center;
+  overflow-y:auto;
+  align-items: center;
+}
+
+
+
 
 @media (max-width: 1420px) {
   .nav__menu{
@@ -711,16 +771,4 @@ padding: 3em 3em;
   padding-left: 2em;
   padding-right: 2em;
 }
-
-
-
-.panel{
-  flex-direction: column;
-
-}
  }
-
-
-
-
- 
